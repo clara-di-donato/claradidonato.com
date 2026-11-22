@@ -63,6 +63,8 @@ The very first message sent from the live site triggers an **activation email to
 - **Before/after slider**: a `<div class="compare">` with two pictures of the same view and size ratio (see the home page).
 - **Header & footer** are repeated in the five pages — change all five.
 - **Colours, spacing, fonts**: variables at the top of `assets/css/style.css`.
+- **After changing `style.css` or `main.js`**: raise the number in `style.css?v=2` / `main.js?v=2` in every page
+  (e.g. to `?v=3`), otherwise browsers may keep using the old file together with the new pages.
 - **Fonts**: the titles use IBM Plex Mono (same as before). The body text used Adelle Sans, an Adobe font that came with Squarespace,
   so it's replaced by the free look-alike Fira Sans. Both are stored in `assets/fonts/` (no Google Fonts calls).
 
