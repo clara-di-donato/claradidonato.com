@@ -10,7 +10,7 @@ servizi/index.html    Servizi
 contatti/index.html   Contatti   (contact form)
 404.html              "Page not found"
 assets/css/style.css  All styling (colours, fonts, spacing at the top)
-assets/js/main.js     Mobile menu, before/after carousel, fade-ins
+assets/js/main.js     Mobile menu, before/after carousel, fade-ins, home photo zoom, servizi opening
 assets/img/           Photos (filled in automatically, see step 3)
 s/                    CV PDF   (filled in automatically, see step 3)
 scripts/              Photo download list + script
