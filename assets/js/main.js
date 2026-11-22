@@ -28,28 +28,68 @@ document.querySelectorAll('.carousel').forEach(function (carousel) {
   carousel.querySelector('[data-dir="next"]').addEventListener('click', function () { go(1); });
 });
 
-// Home: the big photo zooms in slowly while you scroll past it (like the old site)
+// Home: the big photo zooms in slightly while you scroll down, and back out when you scroll up.
+// Same maths as the old Squarespace site (its background "parallax" effect with intensity 5,
+// angle 179° and zoom end 14): about +2.6% at the top of the page up to about +20% when the photo
+// has scrolled away, with a small sideways drift, softly following the scroll.
 (function () {
   var photos = document.querySelectorAll('.zoom-on-scroll');
   if (!photos.length || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  var MAX_ZOOM = 0.14; // 14% bigger by the time the photo leaves the screen
-  var queued = false;
-  function update() {
-    queued = false;
+  var AMOUNT = 5 * 0.01 * 0.5;               // intensity 5
+  var ZOOM_START = 0, ZOOM_END = 0.14;       // zoom end 14
+  var DRIFT = Math.cos(179 * Math.PI / 180); // angle 179°: drifts to the left as you scroll down
+
+  var items = Array.prototype.map.call(photos, function (img) {
+    return { img: img, box: img.parentNode, shown: -1, target: 0, visible: false };
+  });
+
+  // How far you have scrolled past the photo: 0 at the start, 1 once it has left the top of the screen.
+  // Like Squarespace, it starts counting from the top of the page when the photo is near it.
+  function measure(item) {
     var screen = window.innerHeight;
-    photos.forEach(function (img) {
-      var box = img.parentNode.getBoundingClientRect();
-      // 0 when the photo appears at the bottom of the screen, 1 when it leaves at the top
-      var progress = Math.min(1, Math.max(0, (screen - box.top) / (screen + box.height)));
-      img.style.transform = 'scale(' + (1 + MAX_ZOOM * progress).toFixed(4) + ')';
+    var rect = item.box.getBoundingClientRect();
+    var pageTop = rect.top + window.pageYOffset;
+    var pageBelow = document.body.scrollHeight - pageTop - rect.height;
+    var before = Math.min(pageTop, screen);
+    var after = Math.min(pageBelow, screen);
+    var range = before + rect.height + after - screen;
+    var progress = range <= 0 ? 1 : (before - rect.top) / range;
+    item.target = Math.min(1, Math.max(0, progress));
+    item.visible = rect.bottom > 0 && rect.top < screen;
+  }
+
+  function draw(item) {
+    var p = item.shown;
+    var k = 1 - AMOUNT - (ZOOM_START + (ZOOM_END - ZOOM_START) * p);
+    var shift = DRIFT * AMOUNT * (p - 0.5) / k * item.img.offsetWidth;
+    item.img.style.transform =
+      'translate(calc(-50% + ' + shift.toFixed(2) + 'px), -50%) scale(' + (1 / k).toFixed(4) + ')';
+  }
+
+  var queued = false;
+  function frame() {
+    queued = false;
+    var moving = false;
+    items.forEach(function (item) {
+      measure(item);
+      var gap = item.target - item.shown;
+      if (!item.visible || item.shown < 0 || Math.abs(gap) < 0.001) {
+        item.shown = item.target;          // off screen: jump straight there
+      } else {
+        item.shown += gap * 0.1;           // on screen: follow the scroll softly
+        moving = true;
+      }
+      draw(item);
     });
+    if (moving) wake();
   }
-  function queue() {
-    if (!queued) { queued = true; requestAnimationFrame(update); }
+  function wake() {
+    if (!queued) { queued = true; requestAnimationFrame(frame); }
   }
-  window.addEventListener('scroll', queue, { passive: true });
-  window.addEventListener('resize', queue);
-  update();
+  window.addEventListener('scroll', wake, { passive: true });
+  window.addEventListener('resize', wake);
+  window.addEventListener('load', wake);
+  wake();
 })();
 
 // Servizi: services open and close smoothly, and the photo beside them grows and shrinks with them
