@@ -399,7 +399,11 @@ figcaption, .caption {
 .style .mood { margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--line); color: var(--muted); }
 .style .mood b { font-family: var(--mono); font-weight: 400; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; margin-right: 8px; }
 .plan { margin: clamp(56px, 6vw, 96px) var(--margin) 0; }
-.plan .sheet { padding: clamp(14px, 3vw, 48px); background: #fff; box-shadow: 0 0 0 1px var(--line); }
+.plan .sheet { display: block; padding: clamp(14px, 3vw, 48px); background: #fff; box-shadow: 0 0 0 1px var(--line); cursor: zoom-in; }
+.plan .sheet img { width: 100%; }
+.plan figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; }
+.plan figcaption a { color: var(--ink); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.plan figcaption a:hover { color: var(--muted); }
 
 /* Before/after photo carousel (virtual home staging) */
 .carousel { padding: 0 var(--margin); }
