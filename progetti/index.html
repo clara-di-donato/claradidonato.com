@@ -47,7 +47,7 @@
           <li><a href="#stili"><span>04</span> un progetto, tre stili</a></li>
           <li><a href="#duplex"><span>05</span> visualizzazioni 3D di un duplex</a></li>
           <li><a href="#cucina"><span>06</span> una cucina, due opzioni</a></li>
-          <li><a href="#mansarda"><span>07</span> restyling di una mansarda</a></li>
+          <li><a href="#mansarda"><span>07</span> una mansarda, due stili</a></li>
           <li><a href="#interni"><span>08</span> studi di interni</a></li>
           <li><a href="#staging"><span>09</span> virtual home staging</a></li>
         </ol>
@@ -219,19 +219,91 @@
       </div>
     </article>
 
-    <!-- 07 -->
+    <!-- 07: each slider shows the same view in the two styles (left: blu petrolio, right: legno) -->
     <article class="section project" id="mansarda">
       <header class="grid project-head">
         <p class="project-num">07</p>
         <div class="project-title">
-          <h2 class="title">restyling di una mansarda</h2>
-          <p class="project-tags">restyling · rendering</p>
+          <h2 class="title">una mansarda, due stili</h2>
+          <p class="project-tags">restyling · rendering · viste dall’alto</p>
         </div>
-        <p class="project-text">Toni neutri, legno e accenti neri per una zona giorno sotto il tetto, tra il divano e il tavolo da pranzo.</p>
+        <p class="project-text">Per la stessa mansarda, due proposte d’arredo a confronto: una in blu petrolio, grigio e nero, l’altra con legno e toni naturali. Trascina sulle immagini per passare da uno stile all’altro, anche nelle viste dall’alto.</p>
       </header>
       <div class="row">
-        <figure style="flex-grow: 1.329"><img src="../assets/img/progetti/mansarda-soggiorno.jpg" alt="Rendering del soggiorno in mansarda con divano grigio e tavolino in metallo" width="1600" height="1204" loading="lazy"></figure>
-        <figure style="flex-grow: 0.770"><img src="../assets/img/progetti/mansarda-pranzo.jpg" alt="Rendering della zona pranzo in mansarda" width="1367" height="1776" loading="lazy"></figure>
+        <figure class="compare-wrap" style="flex-grow: 0.771">
+          <div class="compare" style="--ratio: 957 / 1242">
+            <img src="../assets/img/progetti/mansarda-pranzo-blu.jpg" alt="Zona pranzo in mansarda, stile blu petrolio con tavolo nero" width="957" height="1242" loading="lazy">
+            <img class="after" src="../assets/img/progetti/mansarda-pranzo.jpg" alt="La stessa zona pranzo, stile legno con tavolo in legno chiaro" width="1367" height="1776" loading="lazy">
+            <span class="compare-line" aria-hidden="true"></span>
+            <span class="compare-tag compare-tag--before" aria-hidden="true">blu petrolio</span>
+            <span class="compare-tag compare-tag--after" aria-hidden="true">legno</span>
+            <input type="range" min="0" max="100" value="50" aria-label="Confronta i due stili della zona pranzo">
+          </div>
+          <figcaption>zona pranzo</figcaption>
+        </figure>
+        <figure class="compare-wrap" style="flex-grow: 1.031">
+          <div class="compare" style="--ratio: 1007 / 977">
+            <img src="../assets/img/progetti/mansarda-camera-blu.jpg" alt="Camera da letto in mansarda, stile blu petrolio con parete a pannelli" width="1007" height="977" loading="lazy">
+            <img class="after" src="../assets/img/progetti/render-camera-mansarda.jpg" alt="La stessa camera, stile legno con testiera in listelli" width="1005" height="977" loading="lazy">
+            <span class="compare-line" aria-hidden="true"></span>
+            <span class="compare-tag compare-tag--before" aria-hidden="true">blu petrolio</span>
+            <span class="compare-tag compare-tag--after" aria-hidden="true">legno</span>
+            <input type="range" min="0" max="100" value="50" aria-label="Confronta i due stili della camera">
+          </div>
+          <figcaption>camera</figcaption>
+        </figure>
+        <figure class="compare-wrap" style="flex-grow: 0.752">
+          <div class="compare" style="--ratio: 666 / 886">
+            <img src="../assets/img/progetti/mansarda-comodino-blu.jpg" alt="Comodino davanti alla parete blu petrolio" width="666" height="886" loading="lazy">
+            <img class="after" src="../assets/img/progetti/render-camera.jpg" alt="Lo stesso angolo con testiera in listelli di legno" width="715" height="951" loading="lazy">
+            <span class="compare-line" aria-hidden="true"></span>
+            <span class="compare-tag compare-tag--before" aria-hidden="true">blu</span>
+            <span class="compare-tag compare-tag--after" aria-hidden="true">legno</span>
+            <input type="range" min="0" max="100" value="50" aria-label="Confronta i due stili del comodino">
+          </div>
+          <figcaption>dettaglio</figcaption>
+        </figure>
+      </div>
+      <div class="row row--narrow">
+        <figure class="compare-wrap">
+          <div class="compare" style="--ratio: 1155 / 618">
+            <img src="../assets/img/progetti/mansarda-studio-blu.jpg" alt="Angolo studio sotto il tetto con scaffali in rete metallica nera" width="1155" height="618" loading="lazy">
+            <img class="after" src="../assets/img/progetti/mansarda-studio-legno.jpg" alt="Lo stesso angolo studio con mensole in legno e cassettiera bianca" width="1155" height="618" loading="lazy">
+            <span class="compare-line" aria-hidden="true"></span>
+            <span class="compare-tag compare-tag--before" aria-hidden="true">blu petrolio</span>
+            <span class="compare-tag compare-tag--after" aria-hidden="true">legno</span>
+            <input type="range" min="0" max="100" value="50" aria-label="Confronta i due stili dell’angolo studio">
+          </div>
+          <figcaption>angolo studio</figcaption>
+        </figure>
+      </div>
+      <div class="row row--narrow">
+        <figure style="flex-grow: 1.031"><img src="../assets/img/progetti/mansarda-soggiorno-blu.jpg" alt="Soggiorno in mansarda, stile blu petrolio con divano beige e tavolino in marmo" width="1200" height="1164" loading="lazy"><span class="tag">blu petrolio</span><figcaption>soggiorno</figcaption></figure>
+        <figure style="flex-grow: 1.329"><img src="../assets/img/progetti/mansarda-soggiorno.jpg" alt="Soggiorno in mansarda, stile legno con divano grigio e tavolino in metallo" width="1600" height="1204" loading="lazy"><span class="tag">legno</span><figcaption>soggiorno</figcaption></figure>
+      </div>
+      <div class="row">
+        <figure class="compare-wrap" style="flex-grow: 1.710">
+          <div class="compare" style="--ratio: 1322 / 773">
+            <img src="../assets/img/progetti/mansarda-pianta-giorno-blu.jpg" alt="Vista dall’alto della zona giorno, stile blu petrolio" width="1322" height="773" loading="lazy">
+            <img class="after" src="../assets/img/progetti/mansarda-pianta-giorno-legno.jpg" alt="Vista dall’alto della zona giorno, stile legno" width="1322" height="773" loading="lazy">
+            <span class="compare-line" aria-hidden="true"></span>
+            <span class="compare-tag compare-tag--before" aria-hidden="true">blu petrolio</span>
+            <span class="compare-tag compare-tag--after" aria-hidden="true">legno</span>
+            <input type="range" min="0" max="100" value="50" aria-label="Confronta i due stili nella vista dall’alto della zona giorno">
+          </div>
+          <figcaption>zona giorno vista dall’alto</figcaption>
+        </figure>
+        <figure class="compare-wrap" style="flex-grow: 1.079">
+          <div class="compare" style="--ratio: 722 / 669">
+            <img src="../assets/img/progetti/mansarda-pianta-camera-blu.jpg" alt="Vista dall’alto della camera, stile blu petrolio" width="722" height="669" loading="lazy">
+            <img class="after" src="../assets/img/progetti/mansarda-pianta-camera-legno.jpg" alt="Vista dall’alto della camera, stile legno" width="722" height="669" loading="lazy">
+            <span class="compare-line" aria-hidden="true"></span>
+            <span class="compare-tag compare-tag--before" aria-hidden="true">blu</span>
+            <span class="compare-tag compare-tag--after" aria-hidden="true">legno</span>
+            <input type="range" min="0" max="100" value="50" aria-label="Confronta i due stili nella vista dall’alto della camera">
+          </div>
+          <figcaption>camera vista dall’alto</figcaption>
+        </figure>
       </div>
     </article>
 
@@ -243,16 +315,17 @@
           <h2 class="title">studi di interni</h2>
           <p class="project-tags">rendering</p>
         </div>
-        <p class="project-text">Bagni, camere e piccoli angoli da vivere: una selezione di ambienti progettati e visualizzati in 3D.</p>
+        <p class="project-text">Bagni, cucine, soggiorni e piccoli angoli da vivere: una selezione di ambienti progettati e visualizzati in 3D.</p>
       </header>
       <div class="row">
         <figure style="flex-grow: 1.027"><img src="../assets/img/progetti/render-bagno.jpg" alt="Rendering di un bagno con rivestimento in legno a spina di pesce" width="1200" height="1168" loading="lazy"></figure>
         <figure style="flex-grow: 0.769"><img src="../assets/img/progetti/render-cameretta.jpg" alt="Rendering di una cameretta con arcobaleno dipinto a parete" width="960" height="1248" loading="lazy"></figure>
         <figure style="flex-grow: 1.027"><img src="../assets/img/progetti/render-nicchia.jpg" alt="Rendering di una nicchia con seduta imbottita" width="1200" height="1168" loading="lazy"></figure>
       </div>
-      <div class="row row--narrow">
-        <figure style="flex-grow: 0.752"><img src="../assets/img/progetti/render-camera.jpg" alt="Rendering di una camera con testiera in listelli di legno" width="715" height="951" loading="lazy"></figure>
-        <figure style="flex-grow: 1.029"><img src="../assets/img/progetti/render-camera-mansarda.jpg" alt="Rendering di una camera da letto in mansarda" width="1005" height="977" loading="lazy"></figure>
+      <div class="row">
+        <figure style="flex-grow: 1.030"><img src="../assets/img/progetti/render-soggiorno-tv.jpg" alt="Rendering di un soggiorno con parete attrezzata bianca e nicchia in legno per la TV" width="1134" height="1101" loading="lazy"></figure>
+        <figure style="flex-grow: 0.962"><img src="../assets/img/progetti/render-cucina-blu.jpg" alt="Rendering di una cucina blu notte con penisola e sgabelli in legno" width="815" height="847" loading="lazy"></figure>
+        <figure style="flex-grow: 0.771"><img src="../assets/img/progetti/render-bagno-2.jpg" alt="Rendering di un bagno con sanitari sospesi e mensole" width="605" height="785" loading="lazy"></figure>
       </div>
     </article>
 
