@@ -64,8 +64,9 @@ The very first message sent from the live site triggers an **activation email to
   If the "before" photo was taken at a slant, straighten it first so the two line up: `_strumenti/raddrizza.py`
   (outside the site folder) does it for the Casa E. wall, from landmarks measured with `_strumenti/lente.py`;
   `_strumenti/affina.py` then fine-tunes it by matching the edges of the two pictures.
-- **Changed a picture?** Save it under a new file name (and update the page), otherwise browsers that
-  visited the site before may keep showing the old one.
+- **Changed a picture?** Save it under a new file name, or add/raise a number at the end of its address in the
+  page (`parete-fotomontaggio.jpg?v=2` → `?v=3`); otherwise browsers that visited the site before may keep
+  showing the old one.
 - **Header & footer** are repeated in the five pages — change all five.
 - **Colours, spacing, fonts**: variables at the top of `assets/css/style.css`.
 - **After changing `style.css` or `main.js`**: raise the number in `style.css?v=5` / `main.js?v=5` in every page
