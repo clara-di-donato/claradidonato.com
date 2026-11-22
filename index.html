@@ -12,7 +12,7 @@
   <meta property="og:image" content="https://www.claradidonato.com/assets/img/ristrutturazione-interni.jpg">
   <link rel="icon" type="image/png" href="assets/img/casetta.png">
   <link rel="preload" href="assets/fonts/ibm-plex-mono-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/style.css?v=4">
+  <link rel="stylesheet" href="assets/css/style.css?v=5">
 </head>
 <body>
   <a class="skip-link" href="#main">Vai al contenuto</a>
@@ -81,35 +81,40 @@
         </div>
         <a class="btn" href="progetti/">tutti i progetti</a>
       </div>
-      <!-- Staggered on purpose: each card has its own column span and offset in style.css (.card--1 … .card--7) -->
+      <!-- Zigzag on purpose: one project at a time, alternating sides; spans and offsets are in style.css (.card--1 … .card--8).
+           Numbers match the Progetti page. -->
       <div class="grid cards">
         <a class="card card--1" href="progetti/#parete">
           <div class="card-media" style="--ratio: 4 / 3"><img src="assets/img/progetti/parete-luci.jpg" alt="Parete con nicchie e mensole illuminate sotto un soffitto in legno" width="1195" height="896" loading="lazy"></div>
-          <div class="card-text"><span class="card-num">01</span><h3 class="card-title">Casa M.</h3><p class="card-meta">parete attrezzata · fotomontaggio</p></div>
+          <div class="card-text"><span class="card-num">01</span><h3 class="card-title">Casa E.</h3><p class="card-meta">parete attrezzata · fotomontaggio</p></div>
         </a>
         <a class="card card--2" href="progetti/#scala">
           <div class="card-media" style="--ratio: 4 / 5"><img src="assets/img/progetti/scala-dettaglio.jpg" alt="Parapetto in pannello traforato lungo una scala" width="1200" height="1600" loading="lazy"></div>
           <div class="card-text"><span class="card-num">02</span><h3 class="card-title">Casa R.</h3><p class="card-meta">scala e parapetto su disegno</p></div>
         </a>
-        <a class="card card--3" href="progetti/#mansarda">
-          <div class="card-media" style="--ratio: 3 / 4"><img src="assets/img/progetti/mansarda-pranzo.jpg" alt="Zona pranzo in mansarda con lampade a sospensione nere" width="1367" height="1776" loading="lazy"></div>
-          <div class="card-text"><span class="card-num">03</span><h3 class="card-title">Casa P.</h3><p class="card-meta">mansarda scandinava in due toni</p></div>
+        <a class="card card--3" href="progetti/#rurale">
+          <div class="card-media" style="--ratio: 928 / 1120"><img src="assets/img/progetti/rurale-fotomontaggio.jpg" alt="Arco in pietra a vista e, oltre, una scala bianca con gradini in cotto" width="928" height="1120" loading="lazy"></div>
+          <div class="card-text"><span class="card-num">03</span><h3 class="card-title">Casa G.</h3><p class="card-meta">casa rurale in Sardegna · dal fotomontaggio al cantiere</p></div>
         </a>
         <a class="card card--4" href="progetti/#appartamento">
           <div class="card-media" style="--ratio: 4 / 3"><img src="assets/img/progetti/appartamento-soggiorno-dopo.jpg" alt="Soggiorno luminoso con divano chiaro, tavolino rotondo e specchio" width="1600" height="1200" loading="lazy"></div>
           <div class="card-text"><span class="card-num">04</span><h3 class="card-title">Casa L.</h3><p class="card-meta">ristrutturazione · prima e dopo</p></div>
         </a>
-        <a class="card card--5" href="progetti/#duplex">
-          <div class="card-media" style="--ratio: 3 / 2"><img src="assets/img/progetti/duplex-soggiorno.jpg" alt="Rendering del soggiorno di un duplex con camino e divano grigio" width="1200" height="675" loading="lazy"></div>
-          <div class="card-text"><span class="card-num">05</span><h3 class="card-title">Casa T.</h3><p class="card-meta">visualizzazioni 3D di un duplex</p></div>
-        </a>
-        <a class="card card--6" href="progetti/#cucina">
-          <div class="card-media" style="--ratio: 1 / 1"><img src="assets/img/progetti/cucina-opzione-1.jpg" alt="Rendering di una cucina bianca e grigia con penisola" width="1200" height="1200" loading="lazy"></div>
-          <div class="card-text"><span class="card-num">06</span><h3 class="card-title">Casa B.</h3><p class="card-meta">una cucina, due opzioni</p></div>
-        </a>
-        <a class="card card--7" href="progetti/#stili">
+        <a class="card card--5" href="progetti/#stili">
           <div class="card-media card-media--sheet" style="--ratio: 1021 / 550"><img src="assets/img/progetti/pianta-progetto.svg" alt="Pianta di progetto di un appartamento con gli arredi" width="1021" height="550" loading="lazy"></div>
-          <div class="card-text"><span class="card-num">07</span><h3 class="card-title">Casa V.</h3><p class="card-meta">tre stili e una pianta</p></div>
+          <div class="card-text"><span class="card-num">05</span><h3 class="card-title">Casa S.</h3><p class="card-meta">tre stili, una pianta e la lista d’acquisto</p></div>
+        </a>
+        <a class="card card--6" href="progetti/#duplex">
+          <div class="card-media" style="--ratio: 3 / 2"><img src="assets/img/progetti/duplex-soggiorno.jpg" alt="Rendering del soggiorno di un duplex con camino e divano grigio" width="1200" height="675" loading="lazy"></div>
+          <div class="card-text"><span class="card-num">06</span><h3 class="card-title">Casa T.</h3><p class="card-meta">visualizzazioni 3D di un duplex</p></div>
+        </a>
+        <a class="card card--7" href="progetti/#cucina">
+          <div class="card-media" style="--ratio: 1 / 1"><img src="assets/img/progetti/cucina-opzione-1.jpg" alt="Rendering di una cucina bianca e grigia con penisola" width="1200" height="1200" loading="lazy"></div>
+          <div class="card-text"><span class="card-num">07</span><h3 class="card-title">Casa B.</h3><p class="card-meta">una cucina, due opzioni</p></div>
+        </a>
+        <a class="card card--8" href="progetti/#mansarda">
+          <div class="card-media" style="--ratio: 3 / 4"><img src="assets/img/progetti/mansarda-pranzo.jpg" alt="Zona pranzo in mansarda con lampade a sospensione nere" width="1367" height="1776" loading="lazy"></div>
+          <div class="card-text"><span class="card-num">08</span><h3 class="card-title">Casa P.</h3><p class="card-meta">mansarda scandinava in due toni</p></div>
         </a>
       </div>
     </section>
@@ -124,15 +129,15 @@
           <a class="btn" href="progetti/#parete">scopri il progetto</a>
         </div>
         <figure class="compare-wrap">
-          <div class="compare" style="--ratio: 4 / 3">
-            <img src="assets/img/progetti/parete-prima.jpg" alt="Stato di fatto: parete in muratura da recuperare sotto un soffitto in legno" width="1600" height="1200" loading="lazy">
-            <img class="after" src="assets/img/progetti/parete-progetto.jpg" alt="Fotomontaggio di progetto: la stessa parete con nicchie e mensole" width="1195" height="896" loading="lazy">
+          <div class="compare" style="--ratio: 1153 / 720">
+            <img src="assets/img/progetti/parete-prima.jpg" alt="Stato di fatto: parete in muratura da recuperare sotto un soffitto in legno" width="1400" height="874" loading="lazy">
+            <img class="after" src="assets/img/progetti/parete-progetto.jpg" alt="Fotomontaggio di progetto: la stessa parete con nicchie e mensole" width="1153" height="720" loading="lazy">
             <span class="compare-line" aria-hidden="true"></span>
             <span class="compare-tag compare-tag--before" aria-hidden="true">prima</span>
             <span class="compare-tag compare-tag--after" aria-hidden="true">progetto</span>
             <input type="range" min="0" max="100" value="50" aria-label="Confronta stato di fatto e progetto">
           </div>
-          <figcaption>Casa M. — parete attrezzata, stato di fatto e fotomontaggio di progetto</figcaption>
+          <figcaption>Casa E. — parete attrezzata, stato di fatto e fotomontaggio di progetto</figcaption>
         </figure>
       </div>
     </section>
@@ -182,6 +187,6 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js?v=4"></script>
+  <script src="assets/js/main.js?v=5"></script>
 </body>
 </html>
