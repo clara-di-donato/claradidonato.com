@@ -55,7 +55,9 @@ The very first message sent from the live site triggers an **activation email to
 ## Editing
 
 - **Text**: edit the HTML file of the page. Each block has a comment saying what it is.
-- **New job on Chi sono**: copy one `<article class="job">…</article>` block and change it.
+- **CV**: replace `s/arch-clara-di-donato-CV.pdf` and raise the `?v=` number of its link in `chisono/index.html`.
+  Before publishing a new CV, check it hides what you want hidden: white marks drawn on a PDF only cover the text,
+  they don't delete it (`_strumenti/pulisci-cv.py` deletes what lies under them).
 - **New service**: copy one `<details>…</details>` block in `servizi/index.html`.
 - **New project**: copy one `<article class="project">…</article>` block in `progetti/index.html`, give it a new `id`
   and number, add it to the list at the top of the page, and put its pictures (max ~2000 px wide) in `assets/img/progetti/`.
@@ -69,8 +71,8 @@ The very first message sent from the live site triggers an **activation email to
   showing the old one.
 - **Header & footer** are repeated in the five pages — change all five.
 - **Colours, spacing, fonts**: variables at the top of `assets/css/style.css`.
-- **After changing `style.css` or `main.js`**: raise the number in `style.css?v=5` / `main.js?v=5` in every page
-  (e.g. to `?v=6`), otherwise browsers may keep using the old file together with the new pages.
+- **After changing `style.css` or `main.js`**: raise the number in `style.css?v=6` / `main.js?v=6` in every page
+  (e.g. to `?v=7`), otherwise browsers may keep using the old file together with the new pages.
 - **Drawings from PDFs** (like the plan of Casa S.) are vector SVGs, not pictures, so lines stay sharp at
   any size. They are made with `_strumenti/pianta-svg.py` (kept outside the site folder), which also removes
   the title block and private labels from the file itself, not just from view.
