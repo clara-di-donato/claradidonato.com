@@ -11,6 +11,7 @@
   <meta property="og:url" content="https://www.claradidonato.com/chisono/">
   <meta property="og:image" content="https://www.claradidonato.com/assets/img/clara-di-donato.jpg">
   <link rel="icon" type="image/png" href="../assets/img/casetta.png">
+  <link rel="preload" href="../assets/fonts/ibm-plex-mono-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
@@ -22,68 +23,98 @@
     <button class="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav"><span></span><span></span></button>
     <nav class="site-nav" id="nav" aria-label="Menu principale">
       <ul>
-        <li><a href="../chisono/" aria-current="page">chi sono</a></li>
+        <li><a href="../progetti/">progetti</a></li>
         <li><a href="../servizi/">servizi</a></li>
+        <li><a href="../chisono/" aria-current="page">chi sono</a></li>
         <li><a href="../contatti/">contatti</a></li>
       </ul>
     </nav>
   </header>
 
   <main id="main">
-    <section class="section about">
 
-      <!-- Photo + introduction -->
-      <div class="grid">
-        <img class="photo" src="../assets/img/clara-di-donato.jpg" alt="Clara Di Donato" width="800" height="800">
-        <div class="intro">
-          <h1 class="visually-hidden">chi sono</h1>
+    <!-- Photo + introduction -->
+    <section class="section page-head">
+      <div class="grid about-head">
+        <img class="about-photo" src="../assets/img/clara-di-donato.jpg" alt="Clara Di Donato tra le piante" width="800" height="800">
+        <div class="about-text">
+          <p class="label">chi sono</p>
+          <h1 class="title">architetto e designer d’interni.</h1>
           <p class="lead">Architetto iscritto presso l’Ordine degli Architetti Pianificatori, Paesaggisti e Conservatori di Roma, sez. A.</p>
           <p>Come libera professionista mi occupo principalmente di progettazione concettuale e studio di spazi interni, progettazioni esecutive, assistenza nelle pratiche edilizie e progettazione di interventi di restauro di facciate esterne.</p>
+          <p>Aiuto inoltre professionisti nel settore immobiliare a migliorare la presentazione di immobili con un arredamento fuori moda o che necessitano di ristrutturazione tramite il servizio di <em>virtual home staging</em>, fornendo dei rendering fotorealistici utili a incrementare il numero di potenziali acquirenti.</p>
+          <p>Sono una professionista accurata e una persona empatica: prendo a cuore ogni progetto e ho una naturale attitudine a creare relazioni sincere e positive.</p>
+          <a class="btn btn--down" href="../s/arch-clara-di-donato-CV.pdf" target="_blank" rel="noopener">scarica il CV completo</a>
         </div>
       </div>
+    </section>
 
-      <!-- Skills & languages -->
-      <div class="grid skills">
-        <h2 class="h-competenze">COMPETENZE</h2>
-        <ul class="col-1">
-          <li>Autocad 2D/3D</li>
-          <li>SketchUp + VRay</li>
-          <li>Adobe Photoshop</li>
-          <li>Adobe Illustrator</li>
-          <li>Adobe InDesign</li>
-          <li>Pacchetto Office</li>
-        </ul>
-        <ul class="col-2">
-          <li>Disegno a mano libera</li>
-          <li>Concept design</li>
-          <li>Progettazione architettonica</li>
-          <li>Progettazione d’interni</li>
-          <li>Progettazione biofilica</li>
-          <li>Progettazione grafica</li>
-        </ul>
-        <ul class="col-3">
-          <li>Comunicazione</li>
-          <li>Pensiero creativo</li>
-          <li>Collaborazione</li>
-          <li>Lavoro autonomo</li>
-          <li>Rapido apprendimento</li>
-          <li>Precisione</li>
-        </ul>
-        <h2 class="h-lingue">LINGUE</h2>
-        <ul class="col-4">
-          <li>Italiano - madre lingua</li>
-          <li>Francese - C1</li>
-          <li>Spagnolo - C1</li>
-          <li>Inglese - B2</li>
-        </ul>
+    <!-- Skills & languages -->
+    <section class="section skills-section">
+      <div class="grid section-head">
+        <div class="head-text">
+          <p class="label">competenze</p>
+          <h2 class="title">strumenti, metodo e lingue.</h2>
+        </div>
       </div>
+      <div class="skills-grid">
+        <div>
+          <h3>software</h3>
+          <ul>
+            <li>Autocad 2D/3D</li>
+            <li>SketchUp + VRay</li>
+            <li>Adobe Photoshop</li>
+            <li>Adobe Illustrator</li>
+            <li>Adobe InDesign</li>
+            <li>Pacchetto Office</li>
+          </ul>
+        </div>
+        <div>
+          <h3>progettazione</h3>
+          <ul>
+            <li>Disegno a mano libera</li>
+            <li>Concept design</li>
+            <li>Progettazione architettonica</li>
+            <li>Progettazione d’interni</li>
+            <li>Progettazione biofilica</li>
+            <li>Progettazione grafica</li>
+          </ul>
+        </div>
+        <div>
+          <h3>attitudini</h3>
+          <ul>
+            <li>Comunicazione</li>
+            <li>Pensiero creativo</li>
+            <li>Collaborazione</li>
+            <li>Lavoro autonomo</li>
+            <li>Rapido apprendimento</li>
+            <li>Precisione</li>
+          </ul>
+        </div>
+        <div>
+          <h3>lingue</h3>
+          <ul>
+            <li>Italiano — madrelingua</li>
+            <li>Francese — C1</li>
+            <li>Spagnolo — C1</li>
+            <li>Inglese — B2</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-      <!-- Work experience: to add a job, copy one <article class="job"> block -->
-      <div class="grid experience">
-        <h2>ESPERIENZA PROFESSIONALE</h2>
+    <!-- Work experience: to add a job, copy one <article class="job"> block -->
+    <section class="section experience">
+      <div class="grid section-head">
+        <div class="head-text">
+          <p class="label">esperienza</p>
+          <h2 class="title">esperienza professionale.</h2>
+        </div>
+      </div>
+      <div class="jobs">
 
         <article class="job">
-          <p class="when">01/23 - in corso<br>Roma, Italia</p>
+          <p class="when">01/23 — in corso<br><span>Roma, Italia</span></p>
           <div class="what">
             <h3>Architetto - libera professionista - collaborazione con <a href="https://studioarchitetturanovelli.it/" target="_blank" rel="noopener">DANILO NOVELLI Studio di Architettura</a></h3>
             <ul>
@@ -95,7 +126,7 @@
         </article>
 
         <article class="job">
-          <p class="when">01/23 - 04/23<br>Roma, Italia</p>
+          <p class="when">01/23 — 04/23<br><span>Roma, Italia</span></p>
           <div class="what">
             <h3>Architetto - libera professionista - collaborazione con <a href="https://www.lab-36.it/" target="_blank" rel="noopener">LAB 36 Studio Associato</a></h3>
             <ul>
@@ -108,7 +139,7 @@
         </article>
 
         <article class="job">
-          <p class="when">04/23 - 07/23<br>da remoto</p>
+          <p class="when">04/23 — 07/23<br><span>da remoto</span></p>
           <div class="what">
             <h3>Architetto d’interni - libera professionista - collaborazione con <a href="https://www.doorfeed.com/" target="_blank" rel="noopener">DOORFEED</a></h3>
             <ul>
@@ -119,7 +150,7 @@
         </article>
 
         <article class="job">
-          <p class="when">02/22 - 09/22<br>Bordeaux, Francia</p>
+          <p class="when">02/22 — 09/22<br><span>Bordeaux, Francia</span></p>
           <div class="what">
             <h3>Interior designer - <a href="https://www.rhinov.fr/" target="_blank" rel="noopener">RHINOV, Savane Vision SAS</a></h3>
             <ul>
@@ -130,7 +161,7 @@
         </article>
 
         <article class="job">
-          <p class="when">10/21 - 02/22<br>Roma, Italia</p>
+          <p class="when">10/21 — 02/22<br><span>Roma, Italia</span></p>
           <div class="what">
             <h3>Architetto - libera professionista - collaborazione con <a href="https://www.architettomagagnino.it/" target="_blank" rel="noopener">Arch. Giorgio Magagnino</a></h3>
             <ul>
@@ -140,7 +171,7 @@
         </article>
 
         <article class="job">
-          <p class="when">06/20 - 12/20<br>Bruxelles, Belgio</p>
+          <p class="when">06/20 — 12/20<br><span>Bruxelles, Belgio</span></p>
           <div class="what">
             <h3>Architetto - <a href="https://the-secretary-general.europarl.europa.eu/en/directorates-general/inlo" target="_blank" rel="noopener">PARLAMENTO EUROPEO, Infrastrutture e Logistica</a></h3>
             <ul>
@@ -153,7 +184,7 @@
         </article>
 
         <article class="job">
-          <p class="when">10/19 - 04/20<br>Bruxelles, Belgio</p>
+          <p class="when">10/19 — 04/20<br><span>Bruxelles, Belgio</span></p>
           <div class="what">
             <h3>Architetto stagista - <a href="https://ep-stages.gestmax.eu/website/homepage" target="_blank" rel="noopener">PARLAMENTO EUROPEO, Infrastrutture e logistica</a></h3>
             <ul>
@@ -163,7 +194,7 @@
         </article>
 
         <article class="job">
-          <p class="when">04/18 - 09/18<br>Roma, Italia</p>
+          <p class="when">04/18 — 09/18<br><span>Roma, Italia</span></p>
           <div class="what">
             <h3>Co-worker stagista - <a href="https://www.ikea.com/" target="_blank" rel="noopener">Inter IKEA Group, Communication and Interior Design</a></h3>
             <ul>
@@ -171,27 +202,38 @@
             </ul>
           </div>
         </article>
-      </div>
 
-      <div class="about-end">
-        <div class="grid">
-          <a class="btn btn--cv" href="../s/arch-clara-di-donato-CV.pdf" target="_blank" rel="noopener">download CV completo</a>
-        </div>
-        <div class="grid btn-row">
-          <a class="btn btn--left" href="../servizi/">servizi</a>
-          <a class="btn btn--right" href="../contatti/">contatti</a>
-        </div>
       </div>
-
+      <div class="cv-row">
+        <a class="btn btn--down" href="../s/arch-clara-di-donato-CV.pdf" target="_blank" rel="noopener">scarica il CV completo</a>
+      </div>
     </section>
+
   </main>
 
   <!-- FOOTER (same on every page) -->
   <footer class="site-footer">
-    <p><strong>clara di donato</strong></p>
-    <p>architetto <em>•</em> designer d’interni</p>
-    <p>Roma</p>
-    <p><a class="linkedin" href="https://www.linkedin.com/in/claradidonato/" aria-label="LinkedIn">in</a></p>
+    <div class="grid footer-cta">
+      <div class="footer-cta-text">
+        <p class="label">contatti</p>
+        <p class="display">hai uno spazio<br>da ripensare?</p>
+      </div>
+      <a class="btn" href="../contatti/">scrivimi</a>
+    </div>
+    <div class="grid footer-bar">
+      <div class="fb-id">
+        <p class="fb-name">clara di donato</p>
+        <p>architetto · designer d’interni<br>Roma</p>
+      </div>
+      <nav class="fb-nav" aria-label="Menu a piè di pagina">
+        <a href="../progetti/">progetti</a>
+        <a href="../servizi/">servizi</a>
+        <a href="../chisono/">chi sono</a>
+        <a href="../contatti/">contatti</a>
+      </nav>
+      <p class="fb-social"><a href="https://www.linkedin.com/in/claradidonato/" target="_blank" rel="noopener">LinkedIn</a></p>
+      <p class="fb-copy">© 2026 clara di donato</p>
+    </div>
   </footer>
 
   <script src="../assets/js/main.js"></script>

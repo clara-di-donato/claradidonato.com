@@ -11,6 +11,46 @@
   });
 })();
 
+// Header: gets a light background and a thin line once the page has scrolled a little
+(function () {
+  var last = null;
+  function update() {
+    var scrolled = window.pageYOffset > 24;
+    if (scrolled !== last) {
+      document.body.classList.toggle('is-scrolled', scrolled);
+      last = scrolled;
+    }
+  }
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+})();
+
+// Before/after slider: drag across the picture (or use the arrow keys) to compare
+document.querySelectorAll('.compare').forEach(function (box) {
+  var input = box.querySelector('input');
+  var dragging = false;
+  function set(percent) {
+    percent = Math.max(0, Math.min(100, percent));
+    box.style.setProperty('--pos', percent + '%');
+    if (input) input.value = Math.round(percent);
+  }
+  function follow(e) {
+    var r = box.getBoundingClientRect();
+    set((e.clientX - r.left) / r.width * 100);
+  }
+  box.addEventListener('pointerdown', function (e) {
+    dragging = true;
+    box.classList.add('is-dragging');
+    try { box.setPointerCapture(e.pointerId); } catch (err) { /* keep going without capture */ }
+    if (e.pointerType !== 'touch') follow(e); // on phones, wait for a sideways swipe (so the page can still scroll)
+  });
+  box.addEventListener('pointermove', function (e) { if (dragging) follow(e); });
+  function stop() { dragging = false; box.classList.remove('is-dragging'); }
+  box.addEventListener('pointerup', stop);
+  box.addEventListener('pointercancel', stop);
+  if (input) input.addEventListener('input', function () { set(+input.value); });
+});
+
 // Before/after carousel arrows (loops around at both ends)
 document.querySelectorAll('.carousel').forEach(function (carousel) {
   var track = carousel.querySelector('.carousel-track');
@@ -123,21 +163,26 @@ document.querySelectorAll('.carousel').forEach(function (carousel) {
   });
 })();
 
-// Fade-in as things scroll into view, like the old site: images, text and buttons.
+// Fade-in as things scroll into view: images, text and buttons.
 // The fade is switched on from here, so everything stays visible if JavaScript doesn't run.
 (function () {
   if (!('IntersectionObserver' in window)) return;
   var items = document.querySelectorAll([
-    'main img:not(.zoom-on-scroll):not(.contact-hero img):not(.carousel-track img)',
+    'main img:not(.zoom-on-scroll):not(.compare img):not(.carousel-track img):not(.card img):not(.row img)',
+    'main .row > figure',
+    'main .compare-wrap',
     'main .carousel',
+    'main .card',
     'main h1:not(.visually-hidden)',
     'main h2:not(summary h2)',
-    'main h3',
-    'main p:not(details p)',
+    'main h3:not(.card h3)',
+    'main p:not(details p):not(.card p)',
     'main li:not(.carousel-track li)',
     'main details',
     'main .btn',
-    '.site-footer p'
+    'main .swatches',
+    '.footer-cta-text > *',
+    '.footer-cta .btn'
   ].join(','));
   var io = new IntersectionObserver(function (entries) {
     var n = 0;

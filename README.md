@@ -1,17 +1,20 @@
 # claradidonato.com
 
-A plain HTML/CSS copy of Clara's Squarespace site, ready for GitHub Pages.
+Clara's website in plain HTML/CSS, ready for GitHub Pages (it started as a copy of the old Squarespace site).
 No build step, no framework: open a file, change the text, push.
 
 ```
 index.html            Home
+progetti/index.html   Progetti   (portfolio: one <article class="project"> per project)
 chisono/index.html    Chi sono   (www.claradidonato.com/chisono)
 servizi/index.html    Servizi
 contatti/index.html   Contatti   (contact form)
 404.html              "Page not found"
 assets/css/style.css  All styling (colours, fonts, spacing at the top)
-assets/js/main.js     Mobile menu, before/after carousel, fade-ins, home photo zoom, servizi opening
-assets/img/           Photos (filled in automatically, see step 3)
+assets/js/main.js     Mobile menu, header on scroll, before/after slider and carousel, fade-ins,
+                      home photo zoom, servizi opening
+assets/img/           Photos (the old site's ones were filled in automatically, see step 3)
+assets/img/progetti/  Project pictures (resized, no metadata, neutral names)
 s/                    CV PDF   (filled in automatically, see step 3)
 scripts/              Photo download list + script
 .github/workflows/    Publishes the site on every push
@@ -54,8 +57,11 @@ The very first message sent from the live site triggers an **activation email to
 - **Text**: edit the HTML file of the page. Each block has a comment saying what it is.
 - **New job on Chi sono**: copy one `<article class="job">…</article>` block and change it.
 - **New service**: copy one `<details>…</details>` block in `servizi/index.html`.
-- **Before/after photos**: put the image in `assets/img/` and add a `<li><img …></li>` line in the carousel in `index.html`.
-- **Header & footer** are repeated in the four pages — change all four.
+- **New project**: copy one `<article class="project">…</article>` block in `progetti/index.html`, give it a new `id`
+  and number, add it to the list at the top of the page, and put its pictures (max ~2000 px wide) in `assets/img/progetti/`.
+- **Virtual home staging photos**: put the image in `assets/img/` and add a `<li><img …></li>` line in the carousel in `progetti/index.html`.
+- **Before/after slider**: a `<div class="compare">` with two pictures of the same view and size ratio (see the home page).
+- **Header & footer** are repeated in the five pages — change all five.
 - **Colours, spacing, fonts**: variables at the top of `assets/css/style.css`.
 - **Fonts**: the titles use IBM Plex Mono (same as before). The body text used Adelle Sans, an Adobe font that came with Squarespace,
   so it's replaced by the free look-alike Fira Sans. Both are stored in `assets/fonts/` (no Google Fonts calls).
