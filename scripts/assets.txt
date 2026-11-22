@@ -1,0 +1,16 @@
+# Photos and files copied from the old Squarespace site.
+# Format: <local path>  <original address>
+# scripts/download-assets.sh downloads any of these that are missing.
+assets/img/casetta.png                  https://images.squarespace-cdn.com/content/v1/631320511ea13074d6ff7532/cbeeafb0-5e87-458c-8525-a2092ba4e5e6/Architettura.png?format=original
+assets/img/ristrutturazione-interni.jpg https://images.squarespace-cdn.com/content/v1/631320511ea13074d6ff7532/c291fb28-ed67-4749-848f-16cfb651cfcd/arch.+clara+di+donato+-+ristrutturazione+interni.jpg?format=original
+assets/img/clara-di-donato-disegno.png  https://images.squarespace-cdn.com/content/v1/631320511ea13074d6ff7532/7fd7ee08-4c7b-4c13-9bd1-61b55c4f21b9/Clara+Di+Donato+Architetto.png?format=original
+assets/img/prima-e-dopo-1.jpg           https://images.squarespace-cdn.com/content/v1/631320511ea13074d6ff7532/9f3d9782-4cb1-459b-9983-a2d7d2297329/arch.+clara+di+donato+-+prima+e+dopo+1.jpg?format=original
+assets/img/prima-e-dopo-2.jpg           https://images.squarespace-cdn.com/content/v1/631320511ea13074d6ff7532/068a91a5-a5d6-4986-9a7d-0d043c934743/arch.+clara+di+donato+-+prima+e+dopo+2.jpg?format=original
+assets/img/prima-e-dopo-3.jpg           https://images.squarespace-cdn.com/content/v1/631320511ea13074d6ff7532/13cbddd5-2328-45d5-963c-5b076110d17b/arch.+clara+di+donato+-+prima+e+dopo+3.jpg?format=original
+assets/img/prima-e-dopo-4.jpg           https://images.squarespace-cdn.com/content/v1/631320511ea13074d6ff7532/4004ba35-a152-4ef4-91c5-7d2859ba39b8/arch.+clara+di+donato+-+prima+e+dopo+4.jpg?format=original
+assets/img/prima-e-dopo-5.jpg           https://images.squarespace-cdn.com/content/v1/631320511ea13074d6ff7532/bc6c7a3e-1284-438c-805c-10130f005598/arch.+clara+di+donato+-+prima+e+dopo+5.jpg?format=original
+assets/img/progetto-1.gif               https://images.squarespace-cdn.com/content/v1/631320511ea13074d6ff7532/f5d34ec4-f7c0-49de-82db-af2b6782bef8/arch.+clara+di+donatto+-+progetto+1.gif?format=original
+assets/img/clara-di-donato.jpg          https://images.squarespace-cdn.com/content/v1/631320511ea13074d6ff7532/d3393cf8-21ab-4033-b645-67e427fce5e8/1649021498005.jpg?format=original
+assets/img/progettazione-completa.png   https://images.squarespace-cdn.com/content/v1/631320511ea13074d6ff7532/647e7371-3b10-4030-b7f9-cd6dacdad3a1/arch.+clara+di+donato+-+progettazione+completa?format=original
+assets/img/contatti.png                 https://images.squarespace-cdn.com/content/v1/631320511ea13074d6ff7532/556c7002-c0a2-43fc-93c6-15b9a7a416f3/contatti+2.png?format=original
+s/arch-clara-di-donato-CV.pdf           https://www.claradidonato.com/s/arch-clara-di-donato-CV.pdf

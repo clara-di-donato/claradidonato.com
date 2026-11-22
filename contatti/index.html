@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>contatti — clara di donato</title>
+  <meta name="description" content="Contatta Clara Di Donato, architetto e designer d’interni a Roma.">
+  <link rel="canonical" href="https://www.claradidonato.com/contatti/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="contatti — clara di donato">
+  <meta property="og:url" content="https://www.claradidonato.com/contatti/">
+  <meta property="og:image" content="https://www.claradidonato.com/assets/img/contatti.png">
+  <link rel="icon" type="image/png" href="../assets/img/casetta.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Vai al contenuto</a>
+
+  <!-- HEADER (same on every page; white text here because the photo is dark) -->
+  <header class="site-header site-header--light">
+    <a class="site-title" href="../">clara di donato</a>
+    <button class="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav"><span></span><span></span></button>
+    <nav class="site-nav" id="nav" aria-label="Menu principale">
+      <ul>
+        <li><a href="../chisono/">chi sono</a></li>
+        <li><a href="../servizi/">servizi</a></li>
+        <li><a href="../contatti/" aria-current="page">contatti</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <h1 class="visually-hidden">contatti</h1>
+
+    <section class="section contact-hero">
+      <img src="../assets/img/contatti.png" alt="Contacts — tel: (+39) 346 390 7990, email: claradidonato.arch@gmail.com, LinkedIn: claradidonato" width="2000" height="1868">
+    </section>
+
+    <section class="section contact">
+      <div class="grid">
+        <!-- Messages are emailed to Clara through FormSubmit (formsubmit.co) — see README -->
+        <form action="https://formsubmit.co/claradidonato.arch@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="Nuovo messaggio dal sito claradidonato.com">
+          <input type="hidden" name="_template" value="table">
+          <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+          <fieldset>
+            <legend class="form-legend">Name</legend>
+            <div class="form-row">
+              <div class="field">
+                <label for="fname">First Name <span class="req">(required)</span></label>
+                <input id="fname" name="Nome" type="text" autocomplete="given-name" required>
+              </div>
+              <div class="field">
+                <label for="lname">Last Name <span class="req">(required)</span></label>
+                <input id="lname" name="Cognome" type="text" autocomplete="family-name" required>
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="field big">
+            <label for="email">Email <span class="req">(required)</span></label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+
+          <div class="field big">
+            <label for="message">Message <span class="req">(required)</span></label>
+            <textarea id="message" name="Messaggio" required></textarea>
+          </div>
+
+          <button class="btn btn--submit" type="submit">Invia</button>
+        </form>
+
+        <a class="btn btn--home" href="../">home</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER (same on every page) -->
+  <footer class="site-footer">
+    <p><strong>clara di donato</strong></p>
+    <p>architetto <em>•</em> designer d’interni</p>
+    <p>Roma</p>
+    <p><a class="linkedin" href="https://www.linkedin.com/in/claradidonato/" aria-label="LinkedIn">in</a></p>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
