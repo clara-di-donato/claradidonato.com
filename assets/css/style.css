@@ -318,10 +318,17 @@ figcaption, .caption {
 .card-num { grid-row: 1 / 3; padding-top: .55em; font-family: var(--mono); font-size: 12px; color: var(--muted); }
 .card-title { font-family: var(--mono); font-size: clamp(19px, 1.6vw, 24px); line-height: 1.3; letter-spacing: -0.035em; }
 .card-meta { margin: 4px 0 0; font-size: 15px; color: var(--muted); }
-.card--1 { grid-column: 1 / 15; }
-.card--2 { grid-column: 17 / 25; margin-top: 15vw; }
-.card--3 { grid-column: 2 / 9; align-self: end; }
-.card--4 { grid-column: 11 / 25; }
+/* Staggered like a photo book: different widths, offsets and empty columns around each card */
+.card--1 { grid-column: 1 / 14; }
+.card--2 { grid-column: 17 / 24; margin-top: 14vw; }
+.card--3 { grid-column: 3 / 10; align-self: end; }
+.card--4 { grid-column: 12 / 25; margin-top: 8vw; }
+.card--5 { grid-column: 8 / 20; }
+.card--6 { grid-column: 2 / 10; }
+.card--7 { grid-column: 13 / 25; margin-top: 12vw; }
+/* A drawing instead of a photo: shown whole, on a white sheet */
+.card-media--sheet { padding: clamp(12px, 2vw, 28px); background: #fff; box-shadow: inset 0 0 0 1px var(--line); }
+.card-media--sheet img { object-fit: contain; }
 
 /* Before/after highlight (home) */
 .feature { padding: clamp(90px, 10vw, 160px) 0; background: var(--soft); }
@@ -357,6 +364,7 @@ figcaption, .caption {
 .project-index a { display: flex; gap: 18px; padding: 9px 0; border-bottom: 1px solid var(--line); text-decoration: none; transition: padding .4s var(--ease); }
 .project-index a:hover { padding-left: 10px; }
 .project-index span { color: var(--muted); }
+.project-index i { font-style: normal; color: var(--muted); }
 
 .project { padding: clamp(80px, 9vw, 140px) 0; }
 .project + .project::before { content: ""; position: absolute; top: 0; left: var(--margin); right: var(--margin); height: 1px; background: var(--line); }
@@ -399,11 +407,19 @@ figcaption, .caption {
 .style .mood { margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--line); color: var(--muted); }
 .style .mood b { font-family: var(--mono); font-weight: 400; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; margin-right: 8px; }
 .plan { margin: clamp(56px, 6vw, 96px) var(--margin) 0; }
-.plan .sheet { display: block; padding: clamp(14px, 3vw, 48px); background: #fff; box-shadow: 0 0 0 1px var(--line); cursor: zoom-in; }
+.plan .sheet { padding: clamp(14px, 3vw, 48px); background: #fff; box-shadow: 0 0 0 1px var(--line); }
 .plan .sheet img { width: 100%; }
-.plan figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; }
-.plan figcaption a { color: var(--ink); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
-.plan figcaption a:hover { color: var(--muted); }
+
+/* What the clients asked for, next to the plan */
+.brief { margin-top: clamp(56px, 6vw, 96px); row-gap: 32px; }
+.brief-head { grid-column: 1 / 7; }
+.brief-head p:not(.label) { margin-top: 14px; color: var(--muted); }
+.brief-list { grid-column: 8 / 25; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 clamp(28px, 3.4vw, 56px); margin: 0; padding: 0; list-style: none; }
+.brief-list li { display: grid; grid-template-columns: 40px 1fr; padding: 20px 0 22px; border-top: 1px solid var(--line); }
+.brief-list .num { grid-row: 1 / 3; padding-top: .3em; font-family: var(--mono); font-size: 12px; color: var(--muted); }
+.brief-list .ask { margin: 0; color: var(--ink); }
+.brief-list .answer { margin-top: 8px; color: var(--muted); }
+.brief-list .answer b { font-family: var(--mono); font-weight: 400; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; margin-right: 8px; color: var(--ink); }
 
 /* Before/after photo carousel (virtual home staging) */
 .carousel { padding: 0 var(--margin); }
@@ -569,6 +585,7 @@ figcaption, .caption {
   .media .compare-wrap { grid-column: 1 / 25; }
   .media .side { grid-column: 9 / 25; }
   .row--narrow { padding: 0 var(--margin); }
+  .brief-head, .brief-list { grid-column: 1 / 25; }
   .services .list { grid-column: 1 / 13; }
   .services .image { grid-column: 14 / 25; }
   .steps, .skills-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -606,7 +623,11 @@ figcaption, .caption {
 
   .hero .doodle { width: 92px; }
   .intro-side .portrait { max-height: 150px; margin: 0 0 40px; }
-  .card--2 { margin-top: 0; }
+  /* Phones: cards stay staggered (alternating widths and sides) instead of one full-width column */
+  .cards { row-gap: 72px; }
+  .cards > .card { width: 86%; margin-top: 0; }
+  .cards > .card:nth-child(2n) { width: 70%; justify-self: end; }
+  .cards > .card:nth-child(3n) { width: 62%; justify-self: center; }
   .st-list a { grid-template-columns: 40px 1fr; }
   .st-list .desc { grid-column: 2; text-align: left; margin-top: -8px; }
 
@@ -615,6 +636,7 @@ figcaption, .caption {
   .row { flex-direction: column; }
   .row > figure { flex: none !important; width: 100%; }
   .styles { grid-template-columns: 1fr; }
+  .brief-list { grid-template-columns: 1fr; }
   .carousel-track li { flex-basis: 84%; }
   .compare-tag { top: 10px; font-size: 10px; }
   .compare-tag--before { left: 10px; }
